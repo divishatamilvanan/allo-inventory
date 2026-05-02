@@ -3,6 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { redis } from "@/lib/redis";
 import { CreateReservationSchema } from "@/lib/schemas";
+ export const dynamic = "force-dynamic";
 
 const RESERVATION_WINDOW_MS = 10 * 60 * 1000; // 10 minutes
 
