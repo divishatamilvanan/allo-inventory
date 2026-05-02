@@ -2,6 +2,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 
+export const dynamic = "force-dynamic";
 // Called by Vercel Cron every minute (configured in vercel.json)
 // Also protectable with CRON_SECRET env var
 export async function GET(req: NextRequest) {
