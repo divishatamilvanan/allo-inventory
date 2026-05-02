@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0a0f0d;
+  --surface: #111a14;
+  --surface-2: #1a2b1e;
+  --border: #1f3325;
+  --green: #22c55e;
+  --green-dim: #16a34a;
+  --text: #e2f5e8;
+  --muted: #6b8f74;
+  --danger: #f87171;
+  --warning: #fbbf24;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', system-ui, sans-serif;
+  min-height: 100vh;
+}
+
+@keyframes countdown-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.countdown-warning {
+  animation: countdown-pulse 1s ease-in-out infinite;
+  color: var(--warning);
+}
+
+.countdown-danger {
+  animation: countdown-pulse 0.5s ease-in-out infinite;
+  color: var(--danger);
+}
+
+@keyframes slide-up {
+  from { transform: translateY(8px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.slide-up {
+  animation: slide-up 0.3s ease forwards;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
